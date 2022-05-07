@@ -1,6 +1,6 @@
 # SQL API with Sqlite3
 
-This is an experimental API. Queries are received in SQL. Sqlite3 reduces this SQL queries, and return the response encoded in json (or plain if set this way).
+This is an experimental API. Queries are received in SQL, Sqlite3 interpret them, and return the response encoded in json (or plain if set this way).
 
 - [SQLite: JSON Functions And Operators](https://www.sqlite.org/json1.html)
 
@@ -8,7 +8,7 @@ _The JSON functions and operators are built into SQLite by default, as of SQLite
 
 ## Requirements
 
-- [SQLite (version  2.38.0)](https://www.sqlite.org/index.html)
+- [SQLite (version  3.38.0)](https://www.sqlite.org/index.html)
 - [Ruby](https://www.ruby-lang.org/en/)
 - [Sinatra](http://sinatrarb.com)
 
