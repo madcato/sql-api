@@ -30,7 +30,6 @@ get '/' do
 end
 
 post "/api" do
-  request.body.rewind  # in case someone already read it
   data = request.body.read
   result = db.execute(data)
   result.to_s

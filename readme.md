@@ -15,12 +15,12 @@ _The JSON functions and operators are built into SQLite by default, as of SQLite
 ## Usage
 
 1. Initialize sqlite3 db and launch service API by executing: `$ ruby run.rb`
-2. Then open another Terminal an launch a curl to try it: `$ curl -d "SELECT json_group_object(email, json_object('full_name', full_name, 'created', created)) AS json_result FROM (SELECT * FROM users WHERE created > '02-01-01');" -X POST http://localhost:4567/api`
+2. Then open another Terminal an launch a curl to try it: `$ curl -d "SELECT json_group_object(email, json_object('full_name', full_name, 'created', created)) AS json_result FROM (SELECT * FROM users WHERE created > '02-01-01');" -H "Content-type: text/plain" -X POST http://localhost:4567/api`
 
 If you don't want receive the results encoded in json, try this other way:
 
 ```sh
-$ curl -d "SELECT * from users;" -X POST http://localhost:4567/api
+$ curl -H "Content-type: text/plain" -d "SELECT * from users;" -X POST http://localhost:4567/api
 ```
 
 ## JSON SQLite Sample
